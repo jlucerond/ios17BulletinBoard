@@ -32,6 +32,9 @@
                                     <state key="normal" title="Post">
                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </state>
+                                    <connections>
+                                        <action selector="postButtonPressed:" destination="RqI-jU-s7U" eventType="touchUpInside" id="bpa-XR-9t2"/>
+                                    </connections>
                                 </button>
                             </subviews>
                             <color key="backgroundColor" red="0.39713401081404143" green="0.82585937500000006" blue="0.14318076496392937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -44,7 +47,7 @@
                             </constraints>
                         </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="uen-DS-xad" detailTextLabel="gi3-Vi-J6Z" style="IBUITableViewCellStyleValue1" id="JED-YS-f2o">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MessageCell" textLabel="uen-DS-xad" detailTextLabel="gi3-Vi-J6Z" style="IBUITableViewCellStyleValue1" id="JED-YS-f2o">
                                 <rect key="frame" x="0.0" y="98" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="JED-YS-f2o" id="CZT-Ps-f1f">
@@ -75,6 +78,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Bulletin Board" id="HqL-PP-rAR"/>
+                    <connections>
+                        <outlet property="messageTextField" destination="NkF-rG-3oY" id="J7m-o2-3er"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="It1-w2-MJ3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

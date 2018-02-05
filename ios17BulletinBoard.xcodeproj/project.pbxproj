@@ -13,6 +13,10 @@
 		D80D13142028C7AF00880442 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D80D13122028C7AF00880442 /* LaunchScreen.storyboard */; };
 		D80D13202028C85B00880442 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D80D131F2028C85B00880442 /* CloudKit.framework */; };
 		D80D13232028CCAB00880442 /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80D13222028CCAB00880442 /* MainTableViewController.swift */; };
+		D80D13262028CF3800880442 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80D13252028CF3800880442 /* Message.swift */; };
+		D80D13282028D18300880442 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80D13272028D18300880442 /* Constants.swift */; };
+		D80D132A2028D42300880442 /* MessageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80D13292028D42300880442 /* MessageController.swift */; };
+		D80D132D2028D58E00880442 /* CloudKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80D132C2028D58E00880442 /* CloudKitManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +29,10 @@
 		D80D131B2028C7EC00880442 /* ios17BulletinBoard.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ios17BulletinBoard.entitlements; sourceTree = "<group>"; };
 		D80D131F2028C85B00880442 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		D80D13222028CCAB00880442 /* MainTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
+		D80D13252028CF3800880442 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		D80D13272028D18300880442 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		D80D13292028D42300880442 /* MessageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageController.swift; sourceTree = "<group>"; };
+		D80D132C2028D58E00880442 /* CloudKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudKitManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,8 +69,10 @@
 			children = (
 				D80D131B2028C7EC00880442 /* ios17BulletinBoard.entitlements */,
 				D80D13092028C7AF00880442 /* AppDelegate.swift */,
-				D80D13222028CCAB00880442 /* MainTableViewController.swift */,
-				D80D130D2028C7AF00880442 /* Main.storyboard */,
+				D80D13272028D18300880442 /* Constants.swift */,
+				D80D132C2028D58E00880442 /* CloudKitManager.swift */,
+				D80D132B2028D42700880442 /* Models+Controllers */,
+				D80D13242028CF1800880442 /* Views+Controllers */,
 				D80D13212028CC7200880442 /* Resources */,
 			);
 			path = ios17BulletinBoard;
@@ -84,6 +94,24 @@
 				D80D13152028C7AF00880442 /* Info.plist */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		D80D13242028CF1800880442 /* Views+Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D80D13222028CCAB00880442 /* MainTableViewController.swift */,
+				D80D130D2028C7AF00880442 /* Main.storyboard */,
+			);
+			path = "Views+Controllers";
+			sourceTree = "<group>";
+		};
+		D80D132B2028D42700880442 /* Models+Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D80D13252028CF3800880442 /* Message.swift */,
+				D80D13292028D42300880442 /* MessageController.swift */,
+			);
+			path = "Models+Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,8 +194,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D80D13262028CF3800880442 /* Message.swift in Sources */,
 				D80D13232028CCAB00880442 /* MainTableViewController.swift in Sources */,
+				D80D132D2028D58E00880442 /* CloudKitManager.swift in Sources */,
+				D80D132A2028D42300880442 /* MessageController.swift in Sources */,
 				D80D130A2028C7AF00880442 /* AppDelegate.swift in Sources */,
+				D80D13282028D18300880442 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,7 +339,7 @@
 				CODE_SIGN_ENTITLEMENTS = ios17BulletinBoard/ios17BulletinBoard.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 53BVAZ8K9G;
-				INFOPLIST_FILE = ios17BulletinBoard/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/ios17BulletinBoard/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.UNUSED.iOSDevelopr.ios17BulletinBoard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -323,7 +355,7 @@
 				CODE_SIGN_ENTITLEMENTS = ios17BulletinBoard/ios17BulletinBoard.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 53BVAZ8K9G;
-				INFOPLIST_FILE = ios17BulletinBoard/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/ios17BulletinBoard/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.UNUSED.iOSDevelopr.ios17BulletinBoard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
