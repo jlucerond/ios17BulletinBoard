@@ -13,12 +13,14 @@ class CloudKitManager {
    private let publicDB = CKContainer.default().publicCloudDatabase
    
    // save a message
-   func save(message: Message) {
+   func save(message: Message, completion: @escaping ((Bool) -> Void)) {
       publicDB.save(message.asCKRecord) { (_, error) in
          if let error = error {
             print("Error: \(error.localizedDescription)")
+            completion(false)
          } else {
             print("Successfully saved to CloudKit")
+            completion(true)
          }
       }
       

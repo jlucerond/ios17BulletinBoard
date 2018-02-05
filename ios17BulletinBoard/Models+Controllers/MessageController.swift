@@ -14,6 +14,7 @@ class MessageController {
    var messages: [Message] = [] {
       didSet {
          // send out a message
+         NotificationCenter.default.post(name: NotificationKeys.messagesUpdated, object: self)
       }
    }
    
@@ -24,7 +25,14 @@ class MessageController {
    // save a new message
    func saveNewMessageWith(text: String) {
       let newMessage = Message(text: text)
-      ckManager.save(message: newMessage)
+      ckManager.save(message: newMessage) { (success) in
+         if success {
+            self.messages.insert(newMessage, at: 0)
+         } else {
+            // find a way to send a message to VC so user knows there was a problem saving
+         }
+      }
+      
    }
    
    // load all messages
